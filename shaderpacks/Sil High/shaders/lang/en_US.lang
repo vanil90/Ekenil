@@ -1,0 +1,161 @@
+# Change effect names through language instead of the shader itself
+# How to change names and comments:
+# option.EffectName=New effect name
+# option.EffectName.comment=Your comment.
+#
+# Change screen names through language instead of properties
+# How to change screen names and give them comments:
+# screen.ScreenName=New screen name
+# screen.ScreenName.comment=Your comment
+#
+# Tooltip lines ending with "!" are automatically shown red.
+# example: option.SHADOW_FILTER.comment=Smooth out shadows. Very small performance hit!.
+
+
+#composite.fsh
+option.EmissiveLightStrength=Lighting strength
+option.EmissiveLightStrength.comment=Adjust the lighting strength of emissive blocks, like torches.
+
+option.Sunlightamount=Sunlightamount
+option.Sunlightamount.comment=10,50,200
+
+option.Shadow_Filter=Shadow Filter
+option.Shadow_Filter.comment=Smooth out edges of shadows. §4Very low performance impact.
+
+option.ColoredShadows=Colored Shadows
+option.ColoredShadows.comment=Toggle colored shadows. Tints shadows color if passing through stained glass. Can cause some visual glitches.
+
+option.Cloud_reflection=Cloud reflections
+option.Cloud_reflection.comment=Toggle cloud reflections. §4Medium performance impact.
+
+option.Moonshading=Shader Moon
+option.Moonshading.comment=Toggle moon drawn by shaderpack. If disabled, enable default moon in: video settings -> details -> Sun & Moon: on
+
+option.shadowMapResolution=Shadows resolution
+option.shadowMapResolution.comment=Change the shadows resolution.
+
+option.shadowDistance=Shadows view distance
+option.shadowDistance.comment=Change the view distance of shadows.
+
+option.Dynamic_Handlight=Dynamic Handlight
+option.Dynamic_Handlight.comment=Items like torches emit light while holding them in your hand. §4No performance impact.
+
+option.Godrays=Godrays
+option.Godrays.comment=Makes the sun casts rays. §4Low performance impact.
+
+option.Celshading=Celshading
+option.Celshading.comment=Applies black lines on everything making it look cartoony, similar to borderlands. §4Very low perfomance impact.
+
+option.SSDO=Ambient Occlusion
+option.SSDO.comment=Makes lighting more realistic (SSDO). §4Medium performance impact.
+
+option.Underwater_Fog=Underwater Fog
+option.Underwater_Fog.comment=Toggle fog underwater.
+
+option.Whiteworld=Whiteworld
+option.Whiteworld.comment=Makes the ground white, mostly used for debugging. This option was added because it was requested alot. I suppose it looks kinda neat for screenshots.
+
+#composite.vsh
+option.Moonlight=Moonlight
+option.Moonlight.comment=Adjust brightness during night time.
+#----------------------------------------------------
+
+#gbuffers_entitites.fsh
+option.MobsFlashRed=Damage flash
+option.MobsFlashRed.comment=Makes mobs and the player flash red when hurt.
+#----------------------------------------------------
+
+#final.fsh
+option.Colorboost=Color boost
+option.Colorboost.comment=Toggle color boost. Without it colors are closer to default, less vibrant.
+
+option.Rain_Drops=Rain Drops
+option.Rain_Drops.comment=Enables rain drops on screen during raining. §4Low performance impact.
+
+#Godrays from composite.fsh
+#Defined variables from final.fsh
+option.Godrays_Density=Godrays density
+option.Godrays_Density.comment=Changes the amount of sunrays.
+
+option.Lens_Flares=Lens Flares
+option.Lens_Flares.comment=Simulates camera lens effects. §4Bloom must be enabled for lens flares. §4Low performance impact.
+option.Lens_Flares_Strength=Lens Flares strength
+option.Lens_Flares_Strength.comment=Changes the strength of lens flares.
+
+option.Bloom=Bloom
+option.Bloom.comment=Adds a glowing effect to emissive blocks. Is also used for sun/moon glow. §4Medium performance impact.
+option.blur_amount=Blur amount
+option.blur_amount.comment=Change the amount of blur, this does also affect the strength of bloom. Lower values mean more blur and thus stronger bloom. Higher values mean less blur and thus weaker bloom.
+
+option.Depth_of_Field=Depth of Field
+option.Depth_of_Field.comment=Simulates eye focusing on objects. §4Low performance impact
+option.DoF_Strength=Dof strength
+option.DoF_Strength.comment=Changes the strength of the blurring effect.
+
+option.Distance_Blur=Distance Blur
+option.Distance_Blur.comment=§4Requires Depth of Field to be enabled. Replaces eye focusing effect with distance being blurred instead.
+
+option.Dof_Distance_View=Blur view distance
+option.Dof_Distance_View.comment=Adjust the view distance of blur.
+
+option.Motionblur=Motionblur
+option.Motionblur.comment=Blurres your view/camera during movemenent. Doesn't work well with Depth of Field. §4Low performance impact
+#----------------------------------------------------
+
+#gbuffers_terrain.fsh/vsh
+option.POM=Parallax mapping
+option.POM.comment=Enable or disable parallax mapping. Requires a Texture/Resourepack that supports Parallax mapping. §4High performance impact
+
+option.POM_RES=Texture resolution
+option.POM_RES.comment=Texture resolution for Parallax mapping. Must be set to your current texture / resourcepack resolution. Parallax mapping depth is also based on it. You can set it to twice your texture / resourcepack resolution to improve it's visuals at the cost of performance.
+
+option.Waving_Leaves=Waving Leaves
+option.Waving_Leaves.comment=
+
+option.Waving_Vines=Waving Vines
+option.Waving_Vines.comment=
+
+option.Waving_Grass=Waving Grass
+option.Waving_Grass.comment=Does not include tallgrass due some issues with it.
+
+option.Waving_Fire=Waving Fire
+option.Waving_Fire.comment=
+
+option.Waving_Lava=Waving Lava
+option.Waving_Lava.comment=
+
+option.Waving_Water=Waving Water
+option.Waving_Water.comment=
+
+option.Waving_Lilypads=Waving Lilypad
+option.Waving_Lilypads.comment=
+
+option.Waving_Entities=Waving Entities
+option.Waving_Entities.comment=Includes: Saplings, small flowers, wheat, carrots and potatoes.
+#----------------------------------------------------
+
+#gbuffers_weather.vsh
+option.WeatherAngle=Alternative Weather angle
+option.WeatherAngle.comment=Toggle alternative weather angle.
+
+#Screens
+#final.fsh
+screen.BLOOM_SCREEN=Bloom
+screen.BLOOM_SCREEN.comment=Change things related to Bloom.
+screen.DOF_SCREEN=Depth of field
+screen.DOF_SCREEN.comment=Change things related to Depth of Field.
+
+screen.SKY_SCREEN=Sky options
+screen.SKY_SCREEN.comment=Contains sky related options, like godrays, lens flares and clouds.
+#----------------------------------------------------
+#composite.fsh/vsh
+screen.SHADOWS_SCREEN=Shadows
+screen.SHADOWS_SCREEN.comment=Change shadow related settings like resolution and view distance.
+#----------------------------------------------------
+#gbuffers_terrain.fsh/vsh
+screen.PARALLAX_SCREEN=Parallax mapping
+screen.PARALLAX_SCREEN.comment=Contains settings related to Parallax mapping.
+
+screen.WAVING_SCREEN=Waving Objects
+screen.WAVING_SCREEN.comment=Contains grass, wheat, leaves etc.
+#----------------------------------------------------
